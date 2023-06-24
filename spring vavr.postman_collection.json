@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "47ec6eb4-ffb8-4136-ab26-2cbb70c956e3",
+		"name": "spring vavr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18682900"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ping",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get invoices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/invoices",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoices"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/invoices",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"invoices"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 09:22:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"bee539bb-9b79-40c4-a3f9-1388f2965a55\",\n        \"number\": 1,\n        \"serie\": 1,\n        \"issuer\": {\n            \"cnpj\": \"992002\",\n            \"corporate_name\": \"\"\n        },\n        \"recipient\": {\n            \"cpf\": \"opp21\",\n            \"name\": \"\"\n        },\n        \"items\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create invoices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : \"03993ike\",\n    \"number\" : 1,\n    \"serie\" : 1,\n    \"issuer\": {\n        \"cnpj\" : \"992002\",\n        \"corporate_name\": \"Gojek\"\n    },\n    \"recipient\" : {\n        \"cpf\" : \"opp21\",\n        \"name\" : \"teten\"\n    },\n    \"items\" : [\n        {\n            \"id\" : \"01\",\n            \"name\" : \"Jarcok\"\n        },\n        {\n            \"id\" : \"02\",\n            \"name\" : \"Mie\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/invoices",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoices"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : \"03993ike\",\n    \"number\" : 1,\n    \"serie\" : 1,\n    \"issuer\": {\n        \"cnpj\" : \"992002\",\n        \"corporate_name\": \"Gojek\"\n    },\n    \"recipient\" : {\n        \"cpf\" : \"opp21\",\n        \"name\" : \"teten\"\n    },\n    \"items\" : [\n        {\n            \"id\" : \"01\",\n            \"name\" : \"Jarcok\"\n        },\n        {\n            \"id\" : \"02\",\n            \"name\" : \"Mie\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/invoices/bee539bb-9b79-40c4-a3f9-1388f2965a55",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"invoices",
+								"bee539bb-9b79-40c4-a3f9-1388f2965a55"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 09:22:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"bee539bb-9b79-40c4-a3f9-1388f2965a55\",\n    \"number\": 1,\n    \"serie\": 1,\n    \"issuer\": {\n        \"cnpj\": \"992002\",\n        \"corporate_name\": \"Gojek\"\n    },\n    \"recipient\": {\n        \"cpf\": \"opp21\",\n        \"name\": \"teten\"\n    },\n    \"items\": [\n        {\n            \"id\": \"01\",\n            \"name\": \"Jarcok\"\n        },\n        {\n            \"id\": \"02\",\n            \"name\": \"Mie\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get invoice by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/invoices/bee539bb-9b79-40c4-a3f9-1388f2965a55",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoices",
+						"bee539bb-9b79-40c4-a3f9-1388f2965a55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete invoice",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/invoices/543c81b1-7b82-4d22-aff9-559561a5db0f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoices",
+						"543c81b1-7b82-4d22-aff9-559561a5db0f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update invoice by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : \"28711c71-8057-46a2-bce0-67d71672be99\",\n    \"number\" : 1,\n    \"serie\" : 1,\n    \"issuer\": {\n        \"cnpj\" : \"992002\",\n        \"corporate_name\": \"Gojek\"\n    },\n    \"recipient\" : {\n        \"cpf\" : \"opp21\",\n        \"name\" : \"teten22\"\n    },\n    \"items\" : [\n        {\n            \"id\" : \"01\",\n            \"name\" : \"Jarcok\"\n        },\n        {\n            \"id\" : \"02\",\n            \"name\" : \"Mie\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/invoices/28711c71-8057-46a2-bce0-67d71672be99",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"invoices",
+						"28711c71-8057-46a2-bce0-67d71672be99"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
